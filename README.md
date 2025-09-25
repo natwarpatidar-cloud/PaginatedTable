@@ -9,3 +9,5 @@
 1. React js
 2. @tanstack/react-query
 3. Axios
+
+<img width="1341" height="966" alt="localhost_5173_" src="https://github.com/user-attachments/assets/4d2ccec0-5b3e-4903-95a8-412f37f12b85" />
