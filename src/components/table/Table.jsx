@@ -36,7 +36,6 @@ export default function CustomizedTables() {
   const [rows, setRows] = useState(null);
 
   const { users, isSuccess } = useGetUsers({ page, limit });
-  console.log(users);
 
   function handleChangePage(event, newPage) {
     setPage(newPage);
@@ -60,25 +59,25 @@ export default function CustomizedTables() {
           <Table sx={{ minWidth: 700 }} stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
-                <StyledTableCell align="left">Picture</StyledTableCell>
-                <StyledTableCell align="left">Name</StyledTableCell>
-                <StyledTableCell align="left">Email</StyledTableCell>
-                <StyledTableCell align="left">Phone</StyledTableCell>
-                <StyledTableCell align="left">Gender</StyledTableCell>
+                <StyledTableCell align="left" style={{ minWidth: 170 }}>Picture</StyledTableCell>
+                <StyledTableCell align="left" style={{ minWidth: 170 }}>Name</StyledTableCell>
+                <StyledTableCell align="left" style={{ minWidth: 170 }}>Email</StyledTableCell>
+                <StyledTableCell align="left" style={{ minWidth: 170 }}>Phone</StyledTableCell>
+                <StyledTableCell align="left" style={{ minWidth: 170 }}>Gender</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows?.map((row) => (
                 <StyledTableRow key={row.id}>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell align="left" style={{ minWidth: 170 }}>
                     <img src={row.picture.thumbnail} className="w-10 h-10 rounded-full" />
                   </StyledTableCell>
-                  <StyledTableCell align="left">
+                  <StyledTableCell align="left" style={{ minWidth: 170 }}>
                     {row.name.title} {row.name.first} {row.name.last}
                   </StyledTableCell>
-                  <StyledTableCell align="left">{row.email}</StyledTableCell>
-                  <StyledTableCell align="left">{row.phone}</StyledTableCell>
-                  <StyledTableCell align="left">{row.gender}</StyledTableCell>
+                  <StyledTableCell align="left" style={{ minWidth: 170 }}>{row.email}</StyledTableCell>
+                  <StyledTableCell align="left" style={{ minWidth: 170 }}>{row.phone}</StyledTableCell>
+                  <StyledTableCell align="left" style={{ minWidth: 170 }}>{row.gender}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>
